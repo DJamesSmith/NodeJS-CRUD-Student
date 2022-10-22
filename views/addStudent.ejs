@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("common/head.ejs")%>
+
+    <body>
+
+        <%-include("common/NavBar.ejs")%>
+
+        <div class="container">
+            <h1 class="text-center mb-5"> Add Student </h1>
+            <form class="row g-3" action="/createStudent" method="POST">
+                <div>
+                    <label class="form-label"> Name </label>
+                    <input class="form-control" type="text" name="name" placeholder="Enter Name" aria-label="default input example" required>
+                </div>
+                <div>
+                    <label class="form-label"> Email </label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input class="form-control" type="email" name="email" placeholder="Enter Email" aria-label="default input example" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label"> Phone </label>
+                    <input class="form-control" type="number" name="phone" placeholder="Enter Phone" aria-label="default input example" required>
+                </div>
+                <div>
+                    <label class="form-label"> City </label>
+                    <input class="form-control" type="text" name="city" placeholder="Enter City" aria-label="default input example" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"> Subject </label>
+                    <select class="form-select" aria-label="Default select example" name="subject" id="subject" required>
+                        <option value=""> --Select subject-- </option>
+                        <option value="JavaScript"> JavaScript </option>
+                        <option value="C"> C </option>
+                        <option value="C++"> C++ </option>
+                        <option value="Swift"> Swift </option>
+                        <option value="CSS"> CSS </option>
+                        <option value="HTML"> HTML </option>
+                        <option value="Java"> Java </option>
+                        <option value="PHP"> PHP </option>
+                        <option value="iOS App Development"> iOS App Development </option>
+                        <option value="AngularJS"> AngularJS </option>
+                        <option value="NextJS"> NextJS </option>
+                        <option value="NodeJS"> NodeJS </option>
+                        <option value="ReactJS"> ReactJS </option>
+                        <option value="VueJS"> VueJS </option>
+                        <option value="Advanced Java"> Advanced Java </option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success"> Submit </button>
+            </form>
+        </div>
+    </body>
+
+</html>

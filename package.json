@@ -1,0 +1,19 @@
+{
+  "name": "node_crud-student_api",
+  "version": "1.0.0",
+  "description": "CRUD Application with ExpressJS NodeJS MongoDB using API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Dion James Smith",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.6.6",
+    "nodemon": "^2.0.20"
+  }
+}

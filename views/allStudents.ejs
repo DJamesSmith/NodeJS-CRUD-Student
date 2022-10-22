@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("common/head.ejs")%>
+
+    <body>
+        <%-include("common/NavBar.ejs")%>
+
+            <div class="container">
+                <a href="/addStudent"> <button class="btn btn-primary"> Add New Student </button> </a>
+                <span>
+                    <h1 class="text-center mb-5"> All Students </h1>
+                </span>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr class="text-center">
+                            <th scope="col"> # </th>
+                            <th scope="col"> Name </th>
+                            <th scope="col"> Email </th>
+                            <th scope="col"> Phone </th>
+                            <th scope="col"> City </th>
+                            <th scope="col"> Subject </th>
+                            <th colspan="2"> Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% let count = 0;
+                        if(allData.length > 0) {
+                            for (let std of allData) { %>
+                            <% const p = std.id %>
+                            <tr class="text-center">
+                                <!-- <th scope="row"> <%=p.slice(20, 24)%> </th> -->
+                                <th scope="row"> <%=p.substring(20, 24)%> </th>
+                                <td> <%=std.name%> </td>
+                                <td> <%=std.email%> </td>
+                                <td> <%=std.phone%> </td>
+                                <td> <%=std.city%> </td>
+                                <td> <%=std.subject%> </td>
+                                <td>
+                                    <a href="/editStudent/<%=std.id%>"> <button class="btn btn-primary"> Edit </button> </a>
+                                    <a href="/deleteStudent/<%=std.id%>"> <button class="btn btn-danger"> Delete </button> </a>
+                                </td>
+                            </tr>
+                        <% } } else { %>
+                            <td rowspan="7"> No data Found </td>
+                        <% } %>
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <%-include("common/scripts.ejs")%>
+    </body>
+
+</html>
