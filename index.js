@@ -16,7 +16,7 @@ app.set("views", "views")
 const apiStudentRouter = require('./route/api/studentRoute')
 app.use('/api', apiStudentRouter)
 
-const dbDriver = "mongodb+srv://dionjamessmith:mwT1njLCNhxc68jd@cluster0.apg8y7z.mongodb.net/StudentCrud"
+const dbDriver = "mongodb+srv://dionjamessmith:W2nXCB1pFcf9YpNx@cluster0.apg8y7z.mongodb.net/StudentCrud"
 
 const port = process.env.PORT || 5000
 
